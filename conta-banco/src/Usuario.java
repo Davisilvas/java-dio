@@ -1,15 +1,30 @@
+import java.util.Scanner;
+
 public class Usuario {
     public static void main(String[] args) throws Exception {
-        System.out.println("Hello, World!");
-        /*
-            Aqui deve conter a interação com o usuário pedindo o seguinte:
-                para que entre com seu nome e sobrenome;
-                para que entre com o número da agência;
-                para que entre com o número da conta;
-                para que informe o valor do saldo em conta;
 
-            o output final deve ser: 
-                "Olá [Nome Cliente], obrigado por criar uma conta em nosso banco, sua agência é [Agencia], conta [Numero] e seu saldo [Saldo] já está disponível para saque".
-         */
+        Scanner sc = new Scanner(System.in);
+
+        String inputClientName;
+        int inputAgence, inputAccountId;
+        double inputBalance;
+        
+        System.out.println("Bem vindo ao Banco X. Fique atento para a abertura de sua conta.");
+       
+        System.out.print("Nos informe o seu nome completo: ");
+        inputClientName = sc.nextLine();
+
+        System.out.print("Nos informe o nome da presente agência: ");
+        inputAgence = sc.nextInt();
+
+        System.out.print("Nos informe o número de sua conta: ");
+        inputAccountId = sc.nextInt();
+
+        System.out.print("Nos informe o seu saldo: ");
+        inputBalance = sc.nextDouble();
+    
+        System.out.printf("Olá %s, obrigado por criar uma conta em nosso banco. Sua agência é %d, sua conta é %d e seu saldo R$%.2f já está disponível para saque%n.", inputClientName, inputAgence, inputAccountId, inputBalance);
+
+        sc.close();
     }
 }

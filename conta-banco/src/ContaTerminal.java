@@ -1,16 +1,18 @@
 /**
- *  Para mim faz mais sentido que a conta seja uma classe e que o usuáio tenha o método main para fazer a inserção de dados
+ *  Para mim faz mais sentido que a conta seja uma classe e que o usuáio tenha o método main para fazer a inserção de dados.  COMO EU NÃO SEI USAR O CONSTRUCTOR EM JAVA AINDA EU FIZ TUDO NA MAIN. MAS QUANDO EU APRENDER OOP EM JAVA EU VOLTO E IMNPLEMENTO ESTA CLASSE COMO EU A IDEALIZEI.
  * @param clientName -> uma string que deve conter nome e sobrenome do usuário que esta a abrir uma nova conta.
  * @param agence -> dado do tipo int que vai receber o número de uma agência. 
  * @param accountId -> dado do tipo int que vai receber o número da conta do cliente.
  * @param balance -> dado do tipo double que vai receber o saldo em conta do cliente.
  */
-
+import java.util.Scanner;
 public class ContaTerminal {
     String clientName;
     int agence;
     int accountId;
     double balance;
+
+    Scanner sc = new Scanner(System.in);
 
     /**
      * Recebe um dado do tipo STRING e atribui à variável clientName.
@@ -47,5 +49,7 @@ public class ContaTerminal {
     public double setBalance(double value){
         return balance = value;
     }
+
+    // criar um method que me de output que eu desejo
 }
  
