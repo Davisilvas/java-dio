@@ -37,7 +37,7 @@ public class ProcessoSeletivo {
     }
     
     static boolean answerTheCall(){
-       return new Random().nextInt(3)==1;
+        return new Random().nextInt(3)==1;
     }
 
     static void printSelectedCandidates(){

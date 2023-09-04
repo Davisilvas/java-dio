@@ -28,7 +28,7 @@ public class AulaTryCatch {
         }catch(InputMismatchException e){
             System.out.println("Os campos idade e altura precisam ser numéricos.");
         }
-        
+
         System.out.println("Isso ta fora do bloco.");
     }
 }
