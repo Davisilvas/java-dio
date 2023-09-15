@@ -1,7 +1,6 @@
 /*
  * TODO
- * IMPLEMENTAR O MÉTODO exibirItens()
- * TESTAR TODOS OS MÉTODOS, MENOS O calcularValorTOtal() que já foi testado e ta ok
+ * Atualizar o código pra por a outra aborgem do método exibirItens()
  */
 
 
@@ -39,6 +38,15 @@ public class CarrinhoDeCompras {
         return valorTotal;
     }
 
+    public void exibirItens(){
+        System.out.println("**************************");
+        System.out.println("ITENS PRESENTES NO CARRINHO");
+
+        for (Item i : cartShopping){
+            System.out.printf("Nome: %s | Quantidade: %d | Valor Unitário: %.2f%n", i.getName(), i.getQtd(), i.getPrice());
+        }
+    }
+
     public static void main(String[] args) {
         CarrinhoDeCompras cart = new CarrinhoDeCompras();
 
@@ -48,7 +56,11 @@ public class CarrinhoDeCompras {
 
         double total = cart.calcularValorTotal();
         System.out.println("-----------------------------------------");
+        cart.exibirItens();
         System.out.println(total);
+
+        cart.removeItem("carteira");
+        cart.exibirItens();
 
     }
 }
