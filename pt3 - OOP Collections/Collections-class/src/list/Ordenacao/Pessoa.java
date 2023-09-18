@@ -36,5 +36,3 @@ public class Pessoa implements Comparable<Pessoa>{
             ", altura = " + altura + '}';
     }
 }
-
-
