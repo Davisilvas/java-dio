@@ -4,7 +4,7 @@
  */
 
 
-package list.shoppingCart;
+package list.ShoppingCart;
 
 import java.util.ArrayList;
 import java.util.List;
