@@ -1,11 +1,11 @@
 package Set.PesquisaSet.Exercicio;
 
-public class Tarefas {
+public class Tarefa {
     private String descricao;
     private boolean done = false;
     
     
-    public Tarefas(String descricao) {
+    public Tarefa(String descricao) {
         this.descricao = descricao;
     }
 
@@ -15,6 +15,10 @@ public class Tarefas {
 
     public boolean isDone() {
         return done;
+    }
+
+    public void setDone(boolean done) {
+        this.done = done;
     }
 
     @Override
@@ -33,7 +37,7 @@ public class Tarefas {
             return false;
         if (getClass() != obj.getClass())
             return false;
-        Tarefas other = (Tarefas) obj;
+        Tarefa other = (Tarefa) obj;
         if (descricao == null) {
             if (other.descricao != null)
                 return false;
