@@ -2,6 +2,7 @@ package Set.OrdenacaoEmSet.Exercicio;
 
 import java.util.HashSet;
 import java.util.Set;
+import java.util.TreeSet;
 
 public class GerenciadorAlunos {
     private Set<Aluno> alunos;
@@ -36,11 +37,23 @@ public class GerenciadorAlunos {
     public void exibirAlunos(){
         System.out.println(alunos);
     }
-}
 
-/*
- * TODO 
- * Ainda tenho que implementar os métodos
- * -> exibirAlunosPorNome()
- * -> exibirAlunosPorNota()
- */
+    public void exibirAlunosPorNota(){
+        Set<Aluno> alunosPorNota = new TreeSet<>(new ComparatorPorNota());
+        if(!alunos.isEmpty()){
+            alunosPorNota.addAll(alunos);
+            System.out.println(alunosPorNota);
+        } else {
+            System.out.println("O conjunto está vazio.");
+        }
+    }
+
+    public void exibirAlunosPorNome() {
+        Set<Aluno> alunosPorNome = new TreeSet<>(alunos);
+        if (!alunos.isEmpty()) {
+            System.out.println(alunosPorNome);
+        } else {
+            System.out.println("O conjunto está vazio!");
+        }
+    }
+}
