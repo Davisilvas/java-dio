@@ -19,6 +19,6 @@ public class Evento {
 
     @Override
     public String toString() {
-        return "Evento [nome=" + nome + ", atracao=" + atracao + "]";
+        return " Evento [ nome = " + nome + ", atracao = " + atracao + " ]";
     }
 }
